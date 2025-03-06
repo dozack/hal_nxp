@@ -190,7 +190,7 @@ static const Clock_Ip_XoscConfigType Clock_Ip_XoscConfigurations_0[CLOCK_IP_CONF
     #if CLOCK_IP_CONFIGURED_XOSCS_0_NO > 0U
     {
         FXOSC_CLK,              /* name */
-        16000000U,              /* frequency */
+        8000000U,              /* frequency */ 
         1U,                     /* enable */
         157U,                   /* startupDelay */
         0U,                     /* bypassOption: Xosc use crystal */
@@ -227,7 +227,7 @@ static const Clock_Ip_PllConfigType Clock_Ip_PllConfigurations_0[CLOCK_IP_CONFIG
         1U,                     /* enable */
         FXOSC_CLK,                     /* inputReference */
         0U,                     /* Bypass */
-        2U,                      /* predivider */
+        1U,                      /* predivider */
         0U,                      /* multiplier */
         0U,                      /* postdivider */
         0U,                     /* numeratorFracLoopDiv */
@@ -350,7 +350,7 @@ static const Clock_Ip_DividerConfigType Clock_Ip_DividerConfigurations_0[CLOCK_I
     #if CLOCK_IP_CONFIGURED_DIVIDERS_0_NO > 0U
     {
         PLL_POSTDIV_CLK,                    /* name */
-        2U,                              /* value */
+        1U,                              /* value */
         {
             0U,
         }
@@ -381,7 +381,7 @@ static const Clock_Ip_DividerConfigType Clock_Ip_DividerConfigurations_0[CLOCK_I
     #if CLOCK_IP_CONFIGURED_DIVIDERS_0_NO > 3U
     {
         CORE_CLK,                    /* name */
-        1U,                              /* value */
+        2U,                              /* value */
         {
             0U,
         }
@@ -391,7 +391,7 @@ static const Clock_Ip_DividerConfigType Clock_Ip_DividerConfigurations_0[CLOCK_I
     #if CLOCK_IP_CONFIGURED_DIVIDERS_0_NO > 4U
     {
         AIPS_PLAT_CLK,                    /* name */
-        2U,                              /* value */
+        4U,                              /* value */
         {
             0U,
         }
@@ -401,7 +401,7 @@ static const Clock_Ip_DividerConfigType Clock_Ip_DividerConfigurations_0[CLOCK_I
     #if CLOCK_IP_CONFIGURED_DIVIDERS_0_NO > 5U
     {
         AIPS_SLOW_CLK,                    /* name */
-        4U,                              /* value */
+        8U,                              /* value */
         {
             0U,
         }
@@ -411,7 +411,7 @@ static const Clock_Ip_DividerConfigType Clock_Ip_DividerConfigurations_0[CLOCK_I
     #if CLOCK_IP_CONFIGURED_DIVIDERS_0_NO > 6U
     {
         HSE_CLK,                    /* name */
-        2U,                              /* value */
+        4U,                              /* value */
         {
             0U,
         }
@@ -421,7 +421,7 @@ static const Clock_Ip_DividerConfigType Clock_Ip_DividerConfigurations_0[CLOCK_I
     #if CLOCK_IP_CONFIGURED_DIVIDERS_0_NO > 7U
     {
         DCM_CLK,                    /* name */
-        4U,                              /* value */
+        8U,                              /* value */
         {
             0U,
         }
@@ -431,7 +431,7 @@ static const Clock_Ip_DividerConfigType Clock_Ip_DividerConfigurations_0[CLOCK_I
     #if CLOCK_IP_CONFIGURED_DIVIDERS_0_NO > 8U
     {
         LBIST_CLK,                    /* name */
-        4U,                              /* value */
+        8U,                              /* value */
         {
             0U,
         }
@@ -441,7 +441,7 @@ static const Clock_Ip_DividerConfigType Clock_Ip_DividerConfigurations_0[CLOCK_I
     #if CLOCK_IP_CONFIGURED_DIVIDERS_0_NO > 9U
     {
         QSPI_MEM_CLK,                    /* name */
-        1U,                              /* value */
+        2U,                              /* value */
         {
             0U,
         }
@@ -451,7 +451,7 @@ static const Clock_Ip_DividerConfigType Clock_Ip_DividerConfigurations_0[CLOCK_I
     #if CLOCK_IP_CONFIGURED_DIVIDERS_0_NO > 10U
     {
         CLKOUT_RUN_CLK,                    /* name */
-        2U,                              /* value */
+        1U,                              /* value */
         {
             0U,
         }
@@ -501,7 +501,7 @@ static const Clock_Ip_DividerConfigType Clock_Ip_DividerConfigurations_0[CLOCK_I
     #if CLOCK_IP_CONFIGURED_DIVIDERS_0_NO > 15U
     {
         FLEXCANA_CLK,                    /* name */
-        1U,                              /* value */
+        2U,                              /* value */
         {
             0U,
         }
@@ -511,7 +511,7 @@ static const Clock_Ip_DividerConfigType Clock_Ip_DividerConfigurations_0[CLOCK_I
     #if CLOCK_IP_CONFIGURED_DIVIDERS_0_NO > 16U
     {
         FLEXCANB_CLK,                    /* name */
-        1U,                              /* value */
+        2U,                              /* value */
         {
             0U,
         }
@@ -1306,7 +1306,7 @@ static const Clock_Ip_CmuConfigType Clock_Ip_CmuConfigurations_0[CLOCK_IP_CONFIG
             CMU_FC_IER_FLLAIE(0U) |
             CMU_FC_IER_FHHAIE(0U)
         ),
-        16000000U,
+        8000000U,
         {
                 0U,          /* Start index in register values array */
                 0U,          /* End index in register values array */
@@ -1382,7 +1382,7 @@ static const Clock_Ip_ConfiguredFrequencyType Clock_Ip_ConfiguredFrequencyConfig
     #if CLOCK_IP_CONFIGURED_FREQUENCIES_0_NO > 2U
     {
         FXOSC_CLK,
-        16000000U,
+        8000000U,
     },
     #endif
     #if CLOCK_IP_CONFIGURED_FREQUENCIES_0_NO > 3U
@@ -2198,7 +2198,7 @@ static const Clock_Ip_CmuConfigType Clock_Ip_CmuConfigurations_1[CLOCK_IP_CONFIG
             CMU_FC_IER_FLLAIE(0U) |
             CMU_FC_IER_FHHAIE(0U)
         ),
-        16000000U,
+        8000000U,
         {
                 0U,          /* Start index in register values array */
                 0U,          /* End index in register values array */
@@ -2274,7 +2274,7 @@ static const Clock_Ip_ConfiguredFrequencyType Clock_Ip_ConfiguredFrequencyConfig
     #if CLOCK_IP_CONFIGURED_FREQUENCIES_1_NO > 2U
     {
         FXOSC_CLK,
-        16000000U,
+        8000000U,
     },
     #endif
     #if CLOCK_IP_CONFIGURED_FREQUENCIES_1_NO > 3U
