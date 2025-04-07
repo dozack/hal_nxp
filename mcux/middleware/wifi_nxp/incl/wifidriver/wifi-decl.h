@@ -259,8 +259,6 @@ typedef struct
     uint32_t wpa3_sae : 1;
     /** 802.1x */
     uint32_t wpa2_entp : 1;
-    /** 802.1x sha256 */
-    uint32_t wpa2_entp_sha256 : 1;
     /** FT 802.1x */
     uint32_t ft_1x : 1;
     /** FT 802.1x sha384 */
@@ -269,6 +267,8 @@ typedef struct
     uint32_t ft_psk : 1;
     /** FT SAE */
     uint32_t ft_sae : 1;
+    /** WPA3 Enterprise */
+    uint32_t wpa3_entp : 1;
     /** WPA3 802.1x sha256 */
     uint32_t wpa3_1x_sha256 : 1;
     /** WPA3 802.1x sha384 */
@@ -1205,7 +1205,7 @@ typedef PACK_START struct
 } PACK_END wifi_btwt_config_t;
 
 #define WLAN_BTWT_REPORT_LEN     9
-#define WLAN_BTWT_REPORT_MAX_NUM 4
+#define WLAN_BTWT_REPORT_MAX_NUM 6
 /** Wi-Fi TWT Report Configuration */
 typedef PACK_START struct
 {
