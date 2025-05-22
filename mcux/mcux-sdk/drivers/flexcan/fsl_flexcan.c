@@ -4303,7 +4303,6 @@ static bool FLEXCAN_CheckUnhandleInterruptEvents(CAN_Type *base)
 #if (defined(FSL_FEATURE_FLEXCAN_HAS_EXTENDED_FLAG_REGISTER)) && (FSL_FEATURE_FLEXCAN_HAS_EXTENDED_FLAG_REGISTER > 0)
         tempmask |= ((uint64_t)base->IMASK2) << 32;
         tempflag |= ((uint64_t)base->IFLAG2) << 32;
-#endif
         fgRet = (0U != (tempmask & tempflag));
 #if defined(CAN_IMASK3_BUF95TO64M_MASK)
         if (0U != (base->IMASK3 & base->IFLAG3))
@@ -4316,6 +4315,7 @@ static bool FLEXCAN_CheckUnhandleInterruptEvents(CAN_Type *base)
         {
             fgRet = true;
         }
+#endif
 #endif
     }
 #if (defined(FSL_FEATURE_FLEXCAN_HAS_ENHANCED_RX_FIFO) && FSL_FEATURE_FLEXCAN_HAS_ENHANCED_RX_FIFO)
